@@ -1,0 +1,111 @@
+{
+    "Admin Panels & Login Pages": [
+        "inurl:admin site:{target}",
+        "inurl:login site:{target}",
+        "inurl:cpanel site:{target}",
+        "inurl:dashboard site:{target}",
+        "site:{target} intitle:\"sign in\"",
+        "inurl:/auth/login site:{target}",
+        "inurl:/user/login site:{target}",
+        "inurl:/admin/login site:{target}",
+        "inurl:/signin site:{target}",
+        "inurl:/admin.php site:{target}",
+        "intitle:\"Log in\" site:{target}"
+    ],
+    "Common Sensitive Files": [
+        "inurl:.env site:{target}",
+        "inurl:.git/config site:{target}",
+        "inurl:wp-config.php site:{target}",
+        "inurl:id_rsa site:{target}",
+        "ext:sql site:{target}",
+        "ext:db site:{target}",
+        "filetype:env site:{target}",
+        "filetype:log site:{target} intext:token",
+        "inurl:.bash_history site:{target}",
+        "filetype:txt intext:API_KEY site:{target}",
+        "inurl:secrets.yml site:{target}",
+        "filetype:txt intext:SECRET_KEY site:{target}"
+    ],
+    "Directory Listings": [
+        "intitle:\"Index of/\" site:{target}",
+        "\"Index of /backup\" site:{target}",
+        "\"Index of /private\" site:{target}",
+        "intitle:\"parent directory\" site:{target}",
+        "intitle:\"Index of /conf\" site:{target}",
+        "intitle:\"Index of /logs\" site:{target}",
+        "intitle:\"Index of /admin\" site:{target}"
+    ],
+    "Configuration & Backup": [
+        "ext:bak site:{target}",
+        "ext:old site:{target}",
+        "ext:backup site:{target}",
+        "ext:conf site:{target}",
+        "ext:ini site:{target}",
+        "ext:log site:{target}",
+        "inurl:backup site:{target} ext:tar | ext:gz | ext:zip",
+        "inurl:src site:{target} ext:zip | ext:rar | ext:7z",
+        "intitle:\"index of\" \"src\" site:{target}"
+    ],
+    "Version Control Leaks": [
+        "inurl:.git site:{target}",
+        "inurl:.svn site:{target}"
+    ],
+    "Web-server Errors & Stack Traces": [
+        "inurl:exception site:{target}",
+        "intitle:\"server at\" site:{target}",
+        "\"database error\" site:{target}",
+        "\"SQL syntax\" site:{target}"
+    ],
+    "Parameter-based Vulnerabilities": [
+        "inurl:id= site:{target}",
+        "inurl:php? filetype:php site:{target}",
+        "inurl:q= | inurl:search= site:{target}",
+        "inurl:search?q= site:{target}",
+        "inurl:keyword= site:{target}",
+        "inurl:lang= site:{target}",
+        "inurl:debug=1 site:{target}"
+    ],
+    "IoT & Cameras": [
+        "inurl:view/index.shtml site:{target}",
+        "intitle:\"webcamXP\" site:{target}",
+        "intitle:\"qBittorrent Web UI\" inurl:8080 site:{target}"
+    ],
+    "Cloud Storage Exposures": [
+        "site:amazonaws.com filetype:log {target}",
+        "site:amazonaws.com intext:\"dhcp\" filetype:txt inurl:apollo {target}",
+        "site:s3.amazonaws.com inurl:{target}",
+        "site:storage.googleapis.com inurl:{target}",
+        "site:digitaloceanspaces.com inurl:{target}"
+    ],
+    "CMS-Specific": [
+        "intitle:\"Index of\" inurl:wp-json/oembed site:{target}",
+        "intitle:\"Index of\" wp-admin site:{target}"
+    ],
+    "Misc Juicy Extensions": [
+        "ext:env | ext:sh | ext:cnf | ext:json | ext:yaml site:{target}",
+        "ext:tar | ext:gz | ext:zip | ext:rar site:{target}"
+    ],
+    "Web Framework Leaks": [
+        "inurl:/storage/logs/laravel.log site:{target}",
+        "inurl:/vendor/laravel/ site:{target}",
+        "intitle:\"Whoops! There was an error.\" site:{target}",
+        "inurl:/admin/login/?next=/admin/ site:{target}",
+        "inurl:/settings.py site:{target}",
+        "inurl:server.js site:{target}",
+        "inurl:app.js site:{target}",
+        "intext:\"Express\" \"Error\" site:{target}"
+    ],
+    "DevOps Portals": [
+        "inurl:/jenkins/login site:{target}",
+        "inurl:/gitlab/login site:{target}",
+        "inurl:/grafana/login site:{target}",
+        "inurl:/kibana/login site:{target}",
+        "inurl:/prometheus/graph site:{target}"
+    ],
+    "Debug, API & Documentation Tools": [
+        "inurl:/debug site:{target}",
+        "intitle:\"Swagger UI\" site:{target}",
+        "intitle:\"API documentation\" site:{target}",
+        "inurl:/analytics site:{target}"
+    ]
+}

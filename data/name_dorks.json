@@ -1,0 +1,110 @@
+{
+    "Contact Information": [
+        "\"{target}\" email",
+        "\"{target}\" contact",
+        "\"{target}\" phone"
+    ],
+    "Social Footprint": [
+        "site:linkedin.com \"{target}\"",
+        "site:twitter.com \"{target}\"",
+        "site:instagram.com \"{target}\"",
+        "site:facebook.com \"{target}\"",
+        "site:github.com \"{target}\"",
+        "site:stackoverflow.com \"{target}\"",
+        "site:tiktok.com \"{target}\"",
+        "site:medium.com \"{target}\"",
+        "site:youtube.com \"{target}\" OR inurl:channel \"{target}\""
+    ],
+    "Job Postings & Reviews": [
+        "\"{target}\" \"careers\" site:indeed.com",
+        "\"{target}\" reviews site:glassdoor.com",
+        "site:indeed.com \"{target}\"",
+        "site:glassdoor.com \"{target}\""
+    ],
+    "Portfolio Discovery": [
+        "\"{target}\" site:wordpress.com",
+        "\"{target}\" site:github.io",
+        "\"{target}\" site:vercel.app",
+        "\"{target}\" site:netlify.app",
+        "\"{target}\" site:dev.to",
+        "\"{target}\" filetype:pdf inurl:resume | inurl:cv",
+        "\"{target}\" intitle:\"portfolio\" site:*.github.io",
+        "\"{target}\" inurl:projects site:github.com"
+    ],
+    "Document Discovery": [
+        "\"{target}\" confidential filetype:pdf",
+        "\"{target}\" internal filetype:docx",
+        "\"{target}\" salary filetype:xls",
+        "\"{target}\" \"not for distribution\"",
+        "\"{target}\" filetype:pdf (resume | cv | portfolio)",
+        "\"{target}\" filetype:docx (resume | cv | portfolio)",
+        "\"{target}\" filetype:pdf intext:\"{target}\" intext:\"email\" intext:\"phone\"",
+        "\"{target}\" filetype:pdf intitle:\"resume\"",
+        "\"{target}\" filetype:pdf inurl:\"resume\""
+    ],
+    "Paste Sites & Leaks": [
+        "\"{target}\" site:pastebin.com",
+        "\"{target}\" site:ghostbin.com",
+        "\"{target}\" site:hastebin.com",
+        "\"{target}\" site:controlc.com",
+        "\"{target}\" site:throwbin.io",
+        "\"{target}\" site:dpaste.org",
+        "\"{target}\" site:justpaste.it",
+        "\"{target}\" site:paste.ee",
+        "\"{target}\" site:pastefs.com",
+        "\"{target}\" site:pastie.io",
+        "\"{target}\" site:snipplr.com",
+        "\"{target}\" site:ideone.com"
+    ],
+    "Credentials & Secrets": [
+        "\"{target}\" password filetype:txt | filetype:log | filetype:ini | filetype:env",
+        "\"{target}\" secret filetype:json | filetype:yaml | filetype:env | filetype:js",
+        "\"{target}\" credentials filetype:txt | filetype:csv",
+        "\"{target}\" api_key filetype:py | filetype:js | filetype:env",
+        "\"{target}\" \"Authorization: Bearer\" filetype:js",
+        "\"{target}\" site:github.com \"password\" | \"secret\" | \"apikey\"",
+        "\"{target}\" site:gitlab.com \"password\" | \"secret\""
+    ],
+    "Cloud Misconfigurations": [
+        "\"{target}\" site:amazonaws.com filetype:log | filetype:xml | filetype:json",
+        "\"{target}\" site:azurewebsites.net",
+        "\"{target}\" site:s3.amazonaws.com",
+        "\"{target}\" site:blob.core.windows.net",
+        "\"{target}\" site:storage.googleapis.com",
+        "\"{target}\" site:digitaloceanspaces.com",
+        "\"{target}\" intitle:\"index of\" \"backup\" site:amazonaws.com",
+        "\"{target}\" filetype:bak OR filetype:zip site:*.amazonaws.com"
+    ],
+    "Technical Reports & Whitepapers": [
+        "\"{target}\" filetype:pdf intext:\"system architecture\"",
+        "\"{target}\" filetype:pptx intext:\"technical roadmap\"",
+        "\"{target}\" filetype:docx intext:\"system design\"",
+        "\"{target}\" filetype:pdf intitle:\"whitepaper\"",
+        "\"{target}\" filetype:pdf intext:\"technical specification\"",
+        "\"{target}\" filetype:pdf intext:\"infrastructure\"",
+        "\"{target}\" filetype:pdf intext:\"scalability\"",
+        "\"{target}\" filetype:pdf intext:\"SLA\"",
+        "\"{target}\" filetype:pdf intitle:\"whitepaper\"",
+        "\"{target}\" filetype:pdf intext:\"financial report\"",
+        "\"{target}\" filetype:pdf intext:\"balance sheet\"",
+        "\"{target}\" filetype:pdf intext:\"income statement\"",
+        "\"{target}\" filetype:xlsx intext:\"revenue\"",
+        "\"{target}\" filetype:pdf intitle:\"annual report\"",
+        "\"{target}\" filetype:pdf intext:\"quarterly results\"",
+        "\"{target}\" filetype:pdf intext:\"earnings\"",
+        "\"{target}\" filetype:xls intext:\"profit and loss\"",
+        "\"{target}\" filetype:pdf intext:\"shareholder\"",
+        "\"{target}\" filetype:pdf intext:\"SEC filing\"",
+        "\"{target}\" filetype:pdf intext:\"investment deck\"",
+        "\"{target}\" filetype:pptx intext:\"financial projection\""
+    ],
+    "Trademarks & Brand Guidelines": [
+        "\"{target}\" filetype:pdf intext:\"brand guidelines\"",
+        "\"{target}\" filetype:pdf intitle:\"visual identity\"",
+        "\"{target}\" filetype:pdf intext:\"logo usage\"",
+        "\"{target}\" trademark filetype:pdf",
+        "\"{target}\" filetype:pdf intext:\"brand assets\"",
+        "\"{target}\" filetype:pdf intitle:\"design system\"",
+        "\"{target}\" filetype:pdf intext:\"typography\" intext:\"color palette\""
+    ]
+}
