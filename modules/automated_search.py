@@ -81,7 +81,7 @@ def search_automatically(target, engine, user_agent, dork_sections, is_headless_
             continue
 
         info(f"[{section_name}] Opening window with {len(query_list)} tabs.")
-        print(f"[{window_index}/{total_sections}] Section '{section_name}' started. {len(query_list)} queries to process.")
+        print(f"[{window_index+1}/{total_sections}] Section '{section_name}' started. {len(query_list)} queries to process.")
         drivers.append(driver)  # Store driver so it stays alive
 
         for index, query in enumerate(query_list):
@@ -105,7 +105,7 @@ def search_automatically(target, engine, user_agent, dork_sections, is_headless_
             except Exception as e:
                 error(f"[{section_name}] Failed to load query '{query}': {e}")
         
-        print(f"[{window_index}/{total_sections}] Section '{section_name}' completed.")
+        print(f"[{window_index+1}/{total_sections}] Section '{section_name}' completed.")
 
     info("Automated search has been completed.")
 

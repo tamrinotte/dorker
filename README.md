@@ -16,7 +16,6 @@ Dorker is an advanced reconnaissance tool that automates the use of Google Dorks
 
    * Debian
 
-
          curl -L https://github.com/tamrinotte/dorker/releases/download/debian_v0.1.0/dorker.deb -o dorker.deb
 
 2. Start the installer.
