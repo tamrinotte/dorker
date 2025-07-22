@@ -36,7 +36,7 @@ def search_automatically(target, engine, user_agent, dork_sections, is_headless_
     total_sections = len(dork_sections)
     print(f"Starting automated search for target '{target}' using {engine}. Total sections: {total_sections}")
 
-    results_dir = Path("results") / target
+    results_dir = Path("results", target)
     results_dir.mkdir(parents=True, exist_ok=True)
 
     drivers = []  # Keep all driver instances to prevent garbage collection and keep windows open
@@ -109,6 +109,7 @@ def search_automatically(target, engine, user_agent, dork_sections, is_headless_
 
     info("Automated search has been completed.")
 
+    print(f"\nScreenshots are located at: {results_dir}")
     print("\nAll section windows opened.")
     print("Please inspect them manually.")
 
