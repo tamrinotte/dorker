@@ -2,7 +2,7 @@
 
 ![Dorker](https://raw.githubusercontent.com/tamrinotte/dorker/main/app_images/dorker_logo.png)
 
-Dorker is an advanced reconnaissance tool that automates the use of Google Dorks to discover publicly exposed sensitive information related to a target. It supports both domain-based and personal/company/event name-based queries, provides progress feedback, takes screenshots of search results, and includes stealth optimizations when running in headless mode.
+Dorker is an advanced reconnaissance tool that automates the use of Google Dorks to discover publicly exposed sensitive information related to a target. It supports both domain-based and personal/company/event name-based queries, provides progress feedback, takes screenshots of search results.
 
 <br>
 
@@ -12,11 +12,7 @@ Dorker is an advanced reconnaissance tool that automates the use of Google Dorks
 
    * Kali
 
-         curl -L https://github.com/tamrinotte/dorker/releases/download/kali_v0.1.0/dorker.deb -o dorker.deb
-
-   * Debian
-
-         curl -L https://github.com/tamrinotte/dorker/releases/download/debian_v0.1.0/dorker.deb -o dorker.deb
+         curl -L https://github.com/tamrinotte/dorker/releases/download/kali_v0.1.1/dorker.deb -o dorker.deb
 
 2. Start the installer.
 
@@ -34,6 +30,10 @@ Dorker is an advanced reconnaissance tool that automates the use of Google Dorks
 
 **-gd GECKODRIVER, --geckodriver GECKODRIVER:** Optional path to a GeckoDriver binary. If not provided, Selenium will auto-manage it.
 
+**-min MIN_DELAY, --min_delay MIN_DELAY:** Optional minimum delay (in seconds) between searches to simulate human-like behavior (default: 0).
+
+**-max MAX_DELAY, --max_delay MAX_DELAY:** Optional maximum delay (in seconds) between searches to simulate human-like behavior (default: 1).
+
 <br>
 
 ## Examples
@@ -50,9 +50,9 @@ Dorker is an advanced reconnaissance tool that automates the use of Google Dorks
 
        dorker example.com -gd /home/bob/geckodriver
 
-4. Scan a person or company name using Google:
+4. Scan a person or company name using Startpage:
 
-       dorker "John Doe" -e google
+       dorker "John Doe" -e startpage
 
 <br>
 
@@ -62,7 +62,7 @@ Dorker is an advanced reconnaissance tool that automates the use of Google Dorks
 
 ![Dorker](https://raw.githubusercontent.com/tamrinotte/dorker/main/app_images/dorker_logo.png)
 
-Dorker, bir hedefe ait herkese açık hassas bilgileri otomatik olarak Google Dork sorgularıyla tespit eden gelismis bir keşif aracıdır. Alan adı ve kişi/şirket/etkinlik adı tabanlı aramaları destekler, ilerleme durumu gösterir, arama sonuçlarının ekran görüntülerini alır ve gizli modda tespit edilmeyi azaltacak önlemler uygular.
+Dorker, bir hedefe ait herkese açık hassas bilgileri otomatik olarak Google Dork sorgularıyla tespit eden gelismis bir keşif aracıdır. Alan adı ve kişi/şirket/etkinlik adı tabanlı aramaları destekler, ilerleme durumu gösterir, arama sonuçlarının ekran görüntülerini alır.
 
 <br>
 
@@ -72,11 +72,7 @@ Dorker, bir hedefe ait herkese açık hassas bilgileri otomatik olarak Google Do
 
    * Kali
 
-         curl -L https://github.com/tamrinotte/dorker/releases/download/kali_v0.1.0/dorker.deb -o dorker.deb
-
-   * Debian
-
-	     curl -L https://github.com/tamrinotte/dorker/releases/download/debian_v0.1.0/dorker.deb -o dorker.deb
+         curl -L https://github.com/tamrinotte/dorker/releases/download/kali_v0.1.1/dorker.deb -o dorker.deb
 
 2. Yükleyiciyi başlatın.
 
@@ -94,6 +90,10 @@ Dorker, bir hedefe ait herkese açık hassas bilgileri otomatik olarak Google Do
 
 **-gd GECKODRIVER, --geckodriver GECKODRIVER:** GeckoDriver binary dosyasının isteğe konumu. Sağlanmazsa, Selenium bunu otomatik olarak halledecektir.
 
+**-min MIN_DELAY, --min_delay MIN_DELAY:** Aramalar arasında insan benzeri davranışı taklit etmek için isteğe bağlı minimum gecikme (saniye cinsinden) (varsayılan: 0).
+
+**-max MAX_DELAY, --max_delay MAX_DELAY:** Aramalar arasında insan benzeri davranışı taklit etmek için isteğe bağlı maksimum gecikme (saniye cinsinden) (varsayılan: 1).
+
 <br>
 
 ## Örnekler
@@ -110,6 +110,6 @@ Dorker, bir hedefe ait herkese açık hassas bilgileri otomatik olarak Google Do
 
        dorker example.com -gd /home/bob/geckodriver
 
-4. Google'ı kullanarak bir kişi veya şirket adını tarayın:
+4. Startpage'ı kullanarak bir kişi veya şirket adını tarayın:
 
-       dorker "John Doe" -e google
+       dorker "John Doe" -e startpage

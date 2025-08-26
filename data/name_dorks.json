@@ -1,8 +1,12 @@
 {
     "Contact Information": [
         "\"{target}\" email",
+        "\"{target}\" e-mail",
         "\"{target}\" contact",
-        "\"{target}\" phone"
+        "\"{target}\" phone",
+        "\"{target}\" mobile",
+        "\"{target}\" cell",
+        "\"{target}\" tel"
     ],
     "Social Footprint": [
         "site:linkedin.com \"{target}\"",

@@ -17,7 +17,7 @@ from modules.domain_detection import is_domain
 ##############################
 
 class Dorker:
-    def __init__(self, target, engine, is_headless_mode_on, geckodriver):
+    def __init__(self, target, engine, is_headless_mode_on, geckodriver, min_delay, max_delay):
         self.target = target
         self.engine = engine.lower()
         self.fake_user_agent_file = load_resource_path("data/fake_user_agents.json")
@@ -30,6 +30,8 @@ class Dorker:
         self.dork_sections = load_dorks(dork_file_path=self.dork_file, target=self.target)
         self.is_headless_mode_on = is_headless_mode_on
         self.geckodriver = geckodriver
+        self.min_delay = min_delay
+        self.max_delay = max_delay
 
     def perform_automated_search(self):
         search_automatically(
@@ -38,7 +40,9 @@ class Dorker:
             user_agent=self.user_agent,
             dork_sections=self.dork_sections,
             is_headless_mode_on=self.is_headless_mode_on,
-            geckodriver=self.geckodriver
+            geckodriver=self.geckodriver,
+            min_delay=self.min_delay,
+            max_delay=self.max_delay,
         )
 
     def start(self):
@@ -51,24 +55,36 @@ class Dorker:
 ##############################
 
 def main():
-    parser = ArgumentParser(description="Dorker: DuckDuckGo/Google OSINT Automation")
+    parser = ArgumentParser(description="Dorker: DuckDuckGo/Startpage OSINT Automation")
     parser.add_argument("target", help="Person/Event/Company name or domain to scan")
     parser.add_argument(
         "-e", "--engine",
-        choices=["duckduckgo", "google"],
+        choices=["duckduckgo", "startpage"],
         default="duckduckgo",
-        help="Search engine to use (default: duckduckgo)"
+        help="Search engine to use (default: duckduckgo).",
     )
     parser.add_argument(
         "-hl", "--headless",
         action="store_true",
-        help="Run the search in headless mode (no visible browser window)."
+        help="Run the search in headless mode (no visible browser window).",
     )
     parser.add_argument(
         "-gd", "--geckodriver",
         type=str,
         default=None,
-        help="Optional path to a GeckoDriver binary. If not provided, Selenium will auto-manage it."
+        help="Optional path to a GeckoDriver binary. If not provided, Selenium will auto-manage it.",
+    )
+    parser.add_argument(
+        "-min", "--min_delay",
+        type=int,
+        default=0,
+        help="Optional minimum delay (in seconds) between searches to simulate human-like behavior (default: 0).",
+    )
+    parser.add_argument(
+        "-max", "--max_delay",
+        type=int,
+        default=1,
+        help="Optional maximum delay (in seconds) between searches to simulate human-like behavior (default: 1).",
     )
     args = parser.parse_args()
 
@@ -77,7 +93,9 @@ def main():
             target=args.target,
             engine=args.engine,
             is_headless_mode_on=args.headless,
-            geckodriver=args.geckodriver
+            geckodriver=args.geckodriver,
+            min_delay=args.min_delay,
+            max_delay=args.max_delay,
         )
         dorker.start()
     except FileNotFoundError as e:
