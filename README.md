@@ -12,7 +12,7 @@ Dorker is an advanced reconnaissance tool that automates the use of Google Dorks
 
    * Kali
 
-         curl -L https://github.com/tamrinotte/dorker/releases/download/kali_v0.1.1/dorker.deb -o dorker.deb
+         curl -L https://github.com/tamrinotte/dorker/releases/download/kali_v0.1.2/dorker.deb -o dorker.deb
 
 2. Start the installer.
 
@@ -72,7 +72,7 @@ Dorker, bir hedefe ait herkese açık hassas bilgileri otomatik olarak Google Do
 
    * Kali
 
-         curl -L https://github.com/tamrinotte/dorker/releases/download/kali_v0.1.1/dorker.deb -o dorker.deb
+         curl -L https://github.com/tamrinotte/dorker/releases/download/kali_v0.1.2/dorker.deb -o dorker.deb
 
 2. Yükleyiciyi başlatın.
 

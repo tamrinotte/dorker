@@ -215,7 +215,7 @@ def search_automatically(
             continue
 
         info(f"[{section_name}] Opening window with {len(query_list)} tabs.")
-        debug(
+        print(
             f"[{window_index}/{total_sections}] Section '{section_name}' started. "
             f"{len(query_list)} queries to process."
         )
