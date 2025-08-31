@@ -20,7 +20,7 @@ class Dorker:
     def __init__(self, target, engine, is_headless_mode_on, geckodriver, min_delay, max_delay):
         self.target = target
         self.engine = engine.lower()
-        self.fake_user_agent_file = load_resource_path("data/fake_user_agents.json")
+        self.fake_user_agent_file = load_resource_path("data/fake_user_agents.txt")
         self.user_agent = pick_a_random_user_agent(user_agent_file=self.fake_user_agent_file)
         if is_domain(self.target):
             dork_path = load_resource_path("data/url_dorks.json")
