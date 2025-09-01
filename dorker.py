@@ -46,7 +46,6 @@ class Dorker:
         )
 
     def start(self):
-        print(f"User agent: {self.user_agent}")
         self.perform_automated_search()
 
 ##############################

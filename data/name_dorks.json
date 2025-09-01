@@ -44,7 +44,8 @@
         "\"{target}\" filetype:docx (resume | cv | portfolio)",
         "\"{target}\" filetype:pdf intext:\"{target}\" intext:\"email\" intext:\"phone\"",
         "\"{target}\" filetype:pdf intitle:\"resume\"",
-        "\"{target}\" filetype:pdf inurl:\"resume\""
+        "\"{target}\" filetype:pdf inurl:\"resume\"",
+        "\"{target}\" filetype:pdf | filetype:docx | filetype:doc | filetype:xlsx | filetype xls"
     ],
     "Paste Sites & Leaks": [
         "\"{target}\" site:pastebin.com",

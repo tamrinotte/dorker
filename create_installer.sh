@@ -17,7 +17,7 @@ print_info_message() {
 
 declare_variables() {
     app_name="dorker"
-    version="0.1.3"
+    version="0.1.4"
     username=$USER
     build_dirs=("dist" "build" "package")
     installer="${app_name}.deb"

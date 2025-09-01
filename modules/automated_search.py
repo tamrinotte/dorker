@@ -192,6 +192,7 @@ def search_automatically(
     page_load_timeout = DEFAULT_PAGE_LOAD_TIMEOUT,
 ):
     total_sections = len(dork_sections)
+    print(f"User agent override: {user_agent}")
     info(f"Starting automated search for target '{target}' using {engine}. Total sections: {total_sections}")
 
     results_dir = Path("results") / target
